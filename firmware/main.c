@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2019-2023 Kim Jørgensen
+ * Copyright (c) 2019-2026 Kim Jørgensen
  *
  * This software is provided 'as-is', without any express or implied
  * warranty.  In no event will the authors be held liable for any damages
@@ -27,8 +27,10 @@
 #include "file_types.h"
 #include "print.h"
 #include "memory.h"
+#include "runtime.c"
 #include "hal.c"
 #include "print.c"
+#include "fatfs.c"
 #include "filesystem.c"
 #include "file_types.c"
 #include "cartridge.c"
