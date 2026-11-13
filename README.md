@@ -1,3 +1,5 @@
+*** Official project moved to https://codeberg.org/KimJorgensen/KungFuFlash ***
+
 # Kung Fu Flash
 
 Cartridge for the Commodore 64 that packs a punch.
