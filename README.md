@@ -45,7 +45,8 @@ The following cartridge types are currently supported:
 * Super Snapshot v5
 * Comal-80
 * Ross
-* Mikro Assembler
+* **[NEW] Mikro Assembler**
+* **[NEW] Super Explode V5.0**
 * EasyFlash
 * Prophet64
 * Freeze Frame

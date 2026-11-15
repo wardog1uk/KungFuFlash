@@ -46,6 +46,7 @@ static u32 freezer_state;
 #include "comal80.c"
 #include "ross.c"
 #include "mikro_assembler.c"
+#include "super_explode_v5.c"
 #include "easyflash.c"
 #include "easyflash_3.c"
 #include "prophet64.c"
@@ -115,6 +116,9 @@ static void (*crt_get_handler(u32 cartridge_type, bool vic_support)) (void)
 
         case CRT_MIKRO_ASSEMBLER:
             return mikro_assembler_handler;
+
+        case CRT_SUPER_EXPLODE_V5_0:
+            return se5_handler;
 #endif
         case CRT_OCEAN_TYPE_1:
         case CRT_EASYFLASH:
@@ -194,6 +198,10 @@ static void crt_init(DAT_CRT_HEADER *crt_header)
 
         case CRT_MIKRO_ASSEMBLER:
             mikro_assembler_init();
+            break;
+
+        case CRT_SUPER_EXPLODE_V5_0:
+            se5_init();
             break;
 
         case CRT_EASYFLASH:
