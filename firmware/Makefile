@@ -142,6 +142,7 @@ $(BUILD_DIR)/%.o: %.s
 $(BUILD_DIR)/$(TARGET).elf: $(OBJECTS)
 	$(CC) $(OBJECTS) $(LDFLAGS) -o $@
 	@$(SZ) $@
+	@$(SZ) $@ | awk 'NR == 2 { used = $$1 + $$2; limit = 49152; printf "Flash: %d of %d bytes used (%.2f%%), %d bytes left.\n", used, limit, used * 100 / limit, limit - used }'
 
 $(BUILD_DIR)/$(TARGET).bin: $(BUILD_DIR)/$(TARGET).elf
 	@$(BIN) --gap-fill 0xff --pad-to 0xc000 $< $@
